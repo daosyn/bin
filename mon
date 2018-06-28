@@ -23,4 +23,5 @@ case $monitor in
     *)
         echo "set which monitor(s) to display to"
         echo "usage: mon [on | off | both]"
+        ;;
 esac
