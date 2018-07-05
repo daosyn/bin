@@ -20,6 +20,6 @@ else
                 echo -e "\nplease respond with y or n"
                 ;;
         esac
-        echo ""
+        echo
     done
 fi
