@@ -1,0 +1,9 @@
+#!/bin/bash
+
+if [ -z "$1" ]; then
+    echo "usage: connect [ssid]"
+    exit 1
+fi
+
+read -s -p "enter password for network '$1': " pass
+nmcli dev wifi con $1 password $pass
