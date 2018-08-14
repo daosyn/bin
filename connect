@@ -1,6 +1,7 @@
 #!/bin/bash
 
 if [ -z "$1" ]; then
+    echo "connect to a wifi network"
     echo "usage: connect [ssid]"
     exit 1
 fi

@@ -23,5 +23,6 @@ case $option in
     *)
         echo "set how to display to external monitor"
         echo "usage: extern [only | off | on]"
+        exit 1
         ;;
 esac

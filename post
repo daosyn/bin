@@ -1,7 +1,9 @@
 #!/bin/bash
 
 if [ $# -ne 1 ]; then
+    echo "create a new jekyll post"
     echo "usage: post [title]"
+    exit 1
 else
     echo -e "---\nlayout: default\ntitle: $1\n---\n" > $(date +%F)-$1.md
     echo "post titled '$1' created"
