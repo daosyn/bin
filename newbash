@@ -1,21 +1,20 @@
 #!/bin/bash
 
-# deprecated! i use hugo now
-
 if [ $# -ne 1 ]; then
-    echo "create a new jekyll post"
-    echo "usage: post [title]"
+    echo "create a new bash script"
+    echo "usage: newbash [filename]"
     exit 1
 else
-    echo -e "---\nlayout: default\ntitle: $1\n---\n" > $(date +%F)-$1.md
-    echo "post titled '$1' created"
+    echo -e "#!/bin/bash\n\n" > $1
+    chmod +x $1
+    echo "executable file '$1' created"
     prompt=true
     while $prompt; do
         read -p "edit now? [y/n]: " -n 1 ans
         case $ans in
             y)
                 prompt=false
-                vim $(date +%F)-$1.md
+                vim $1 +3
                 ;;
             n)
                 prompt=false
