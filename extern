@@ -1,6 +1,5 @@
 #!/bin/bash
 
-wallpaper="$HOME/wallpapers/colors.jpg"
 option="$1"
 
 case $option in
@@ -26,4 +25,4 @@ case $option in
         ;;
 esac
 
-feh --bg-fill $wallpaper
+feh --bg-fill $WALLPAPER
